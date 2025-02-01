@@ -34,11 +34,11 @@ pipeline {
                } 
              }  
           }
-      stage('Deploy app') {
-         steps {
-            sh 'kubectl apply -f tomcat-app.yaml'
-         }
-      }
+#      stage('Deploy app') {
+#         steps {
+#            sh 'kubectl apply -f tomcat-app.yaml'
+#         }
+#      }
     }
 
   post {
