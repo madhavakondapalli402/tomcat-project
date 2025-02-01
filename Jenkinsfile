@@ -34,11 +34,12 @@ pipeline {
                } 
              }  
           }
-#      stage('Deploy app') {
-#         steps {
+      stage('Deploy app') {
+         steps {
 #            sh 'kubectl apply -f tomcat-app.yaml'
-#         }
-#      }
+            sh 'doker container run -d -p 80:80 madhavakondapalli402/mytomcat-image:test'
+         }
+      }
     }
 
   post {
